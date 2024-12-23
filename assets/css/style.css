@@ -12,7 +12,7 @@ section.blackdiv{
 section.blackdiv .bg {
     
     background-color: #000;
-    color: #fff;
+    color: #fafafa;
     width: 100%;
     height: 40px;
     margin: 0;
@@ -137,6 +137,7 @@ section.spotlight  div.left .top .img{
 section.spotlight  div.left .top .img img{}
 section.spotlight  div.left .top span{
     font-size: 16px;
+    color: #fafafa;
 }
 section.spotlight  div.left .bottom {
     width: 300px;
@@ -184,8 +185,8 @@ section.categories div.category div.rectangle{
    
 }
 
-section.categories div.category .heading{
-  
+section.categories div.heading h2{
+  font-size: 36px;
 }
 section.categories div.categoryItem{
     margin-bottom: 30px;
@@ -206,7 +207,7 @@ border: 1px solid rgba(223, 215, 215, 0.911);
 border-radius: 4px;
 padding: 20px;
 text-align: center; 
-width: 120px;
+width: 125px;
 }
 
 section.categories div.categoryItem ul li a {
@@ -236,6 +237,7 @@ section.products {
 }
 .product {
    margin-bottom: 30px;
+   width: 250px;
 }
 .product .box {
     background-color: #f5f5f5;
@@ -269,9 +271,15 @@ section.products {
     
     text-align: center;
 }
-.product .box .add-cart p{
+.product .box .add-cart a{
+    text-decoration: none;
     font-size: 16px;
     font-weight: 500;
+    color: #fff;
+}
+.product .box .add-cart p{
+   
+    
 }
 .product .box .topRight {
     position: absolute;
@@ -297,6 +305,7 @@ section.products {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 .circle {
     position: absolute;
@@ -451,6 +460,10 @@ margin-bottom: 10px;
     border-top: 1px solid #F5F5F5; /* You can change the color and thickness */
     margin: 20px 0; /* Space above and below the line */
 }
+div.viewProduct a{
+    text-decoration: none;
+}
+
 div.viewProduct{
     padding:15px 48px ;   
     border-radius: 4px;
@@ -527,14 +540,18 @@ section.services div.service .service-content span{
 footer{
     margin-top: 100px;
     background-color: #000;
+    display: flex;
+    flex-direction: column;
   
 }
 footer .footer {
-    padding: 100px;
-    display: flex;
-    gap: 60px;
-    justify-content: space-between;
 
+}
+footer div.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    gap: 60px;
 }
 footer .footer .item {
 }  
@@ -647,6 +664,13 @@ footer .footer .item .social-media ul li{
 
 footer .footer .item .social-media ul li a img {
 }
+footer .footer div.bottom p{
+    color: #fff;
+    opacity: 60%;
+    text-align: center;
+    font-size: 16px;
+    
+}
 @media (max-width: 980px) {
     header div.middle ul {
         padding: 0;
@@ -661,7 +685,7 @@ footer .footer .item .social-media ul li a img {
     section.categories div.categoryItem ul li {
         width: 80px;
     }
-    footer .footer {
+    footer div.top {
         flex-wrap: wrap;
     
     }
@@ -685,7 +709,7 @@ footer .footer .item .social-media ul li a img {
         width: 300px;
         height: 200px;
     }
-    footer .footer {
+    footer div.top {
         flex-wrap: wrap;
     
     }
@@ -818,7 +842,7 @@ footer .footer .item .social-media ul li a img {
     .product .content span.price {
         font-size: 14px;
     }
-    footer .footer {
+    footer div.top {
         padding: 24px;
     }
 }
