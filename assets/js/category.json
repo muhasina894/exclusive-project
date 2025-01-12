@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "image": "assets/images/CellPhone.svg",
+        "alt": "phone",
+        "name": "Phones"
+    },
+    {
+        "id": 2,
+        "image": "assets/images/Computer.svg",
+        "alt": "computer",
+        "name": "Computers"
+    },
+    {
+        "id": 3,
+        "image": "assets/images/SmartWatch.svg",
+        "alt": "smartwatch",
+        "name": "Smartwatch"
+    },
+    {
+        "id": 4,
+        "image": "assets/images/eadphone.svg",
+        "alt": "headphone",
+        "name": "HeadPhones"
+    },
+    {
+        "id": 5,
+        "image": "assets/images/Gamepad.svg",
+        "alt": "gaming",
+        "name": "Gaming"
+    },
+    {
+        "id": 6,
+        "image": "assets/images/Camera.svg",
+        "alt": "camera",
+        "name": "Camera"
+    }
+]
