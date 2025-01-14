@@ -245,15 +245,29 @@ section.categories div.categoryItem ul li a h4 {
 font-size: 14px;
 margin: 0; 
 }
-
+section .allproducts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    
+}
 section.products , .products2 , .products3{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 80px;
+    gap: 40px;
 }
 
+.moreProduct{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 40px;
+}
 
 .product {
    margin-bottom: 30px;
@@ -502,12 +516,6 @@ margin-bottom: 10px;
     height: 20px;
     border-radius: 50%;
     align-self: center; /* Centers the magenta circle relative to the parent */
-}
-.moreProduct{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
 }
 
 .horizontal-line {
