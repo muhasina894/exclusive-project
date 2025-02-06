@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             let additionalHtml = '';
             let toplefthtml ='';
 
+
             if (index === 4) { 
                 toplefthtml =`
                     <div class="topLeft">
@@ -143,11 +144,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
 
             
-            const productHTML = `
+            const productHTML = (cartClass) => `
             <div class="product">
                 <div class="box">
                     <img src="${product.image}" alt="image">
-                    <div class="add-cart"><a href="#"><p>Add To Cart</p></a></div>
+                    <div class="${cartClass}"><a href="#"><p>Add To Cart</p></a></div>
                     ${toplefthtml} 
                     <div class="topRight">
                         <div class="circle-container">
@@ -176,13 +177,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
             `;
 
             if (productsContainer) {
-                productsContainer.innerHTML += productHTML;
+                productsContainer.innerHTML += productHTML(index === 1 ? 'fixed-cart' : 'add-cart');
             }
             if (productsContainer2) {
-                productsContainer2.innerHTML += productHTML;
+                productsContainer2.innerHTML += productHTML(index === 1 ? 'fixed-cart' : 'add-cart');
             }
             if (productsContainer3) {
-                productsContainer3.innerHTML += productHTML;
+                productsContainer3.innerHTML += productHTML('add-cart');
             }
  
 
@@ -194,7 +195,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
 
-    const searchInput = document.getElementById('search-input');
+        const searchInput = document.getElementById('search-input');
         const productList = document.getElementById('product-list');
 
         searchInput.addEventListener('input', function() {
@@ -208,7 +209,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 if (productName.includes(searchTerm)) {
                     product.style.display = 'block';  // Show the product if it matches
                 } else {
-                    product.style.display = 'none';   // Hide the product if it doesn't match
+                    product.style.display = 'none'; 
+                    
                 }
             });
         });

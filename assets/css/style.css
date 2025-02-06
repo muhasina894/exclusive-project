@@ -4,7 +4,8 @@ body {
     padding: 0;
 }
 body .wrapper {
-    margin: 0 100px;
+    margin: 0 auto;
+    width: 90%;
 }
 div.page{
 padding: 50px 0;
@@ -116,7 +117,7 @@ top: 25px;
 header div.right .image-container {
 display: flex;
 align-items: center;
-gap: 20px;
+gap: 10px;
 }
 header div.right .image-container img {
 width: 30px;
@@ -179,7 +180,9 @@ section.spotlight  div.left .bottom .shop a {
 section.spotlight  div.left .bottom .shop img{   }
 section.spotlight  div.right {}
 section.spotlight  div.right .main-image {}
-section.spotlight  div.right .main-image  img{}
+section.spotlight  div.right .main-image  img{
+    margin-top: -20px;
+}
 
 section.categories{}
 section.categories div.category{
@@ -257,8 +260,9 @@ section.products , .products2 , .products3{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 80px;
-    gap: 40px;
+    margin-bottom: -10px;
+   
+    margin-top: 50px;
 }
 
 .moreProduct{
@@ -270,12 +274,12 @@ section.products , .products2 , .products3{
 }
 
 .product {
-   margin-bottom: 30px;
-   width: 250px;
+   margin-bottom: 60px;
+   width: 270px;
 }
 .product .box {
     background-color: #f5f5f5;
-    width: 250px;
+    width: 270px;
     height: 270px;
     border-radius: 4px;
     position: relative;
@@ -296,15 +300,35 @@ section.products , .products2 , .products3{
 .product .box:hover .add-cart {
     display: block;
 }
+.product .box .fixed-cart{
+    display: block; 
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 0 4px 4px;
+    height: 46px;
+    width: 100%;
+    position: absolute;
+    top:223px;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+}
+.product .box .fixed-cart a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
 .product .box .add-cart{
     display: none;
     background-color: #000;
     color: #fff;
     border-radius: 0 0 4px 4px;
-    height: 41px;
-    width: 250px;
+    height: 46px;
+    width: 100%;
     position: absolute;
-    top:229px;
+    top:223px;
     
     justify-content: center;
     align-items: center;
@@ -528,7 +552,7 @@ div.viewProduct a{
 }
 
 div.viewProduct{
-    padding:15px 48px ;   
+    padding:15px 27px ;   
     border-radius: 4px;
     background-color: #DB4444;
     margin: 0 auto;
@@ -753,6 +777,13 @@ span.overlay {
     display: block;
 }
 
+
+@media (max-width: 1280px) {
+    .moreProduct {
+        gap: 24px;
+    }
+}
+
 @media (max-width: 980px) {
     header div.middle ul {
         padding: 0;
@@ -772,6 +803,10 @@ span.overlay {
         flex-wrap: wrap;
     
     }
+    .moreProduct {
+        gap: 35px;
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -838,6 +873,7 @@ span.overlay {
         font-size: 18px;
         font-weight: 500;
     } 
+   
 }
 @media (max-width: 640px) {
     header div.right .input-container {
@@ -854,24 +890,18 @@ span.overlay {
         width: 180px;
     }
     section.spotlight  div.right .main-image  img{
-        width: 200px;
-        height: 150px;
-    }
-    .product .box {
-       width: 200px;
-       height: 250px;
+        width: 260px;
+        height: 155px;
     }
     .product .box .topRight {
-        left: 180px;
-        top: 20px;
+        left: 232px;
+        top: 27px;
+        gap: 35px;
     }
     .wrapper1 {
         margin: 60px;
     }
-    .product .box .add-cart {
-        width: 200px;
-        top: 210px;
-    }
+    
     section.blackdiv .bg p {
         font-size: 12px;
     }
@@ -884,11 +914,15 @@ span.overlay {
     section.blackdiv .bg .lang span {
         font-size: 12px;
     }
+    .circle{
+        width: 30px;
+        height: 30px;
+
+    }
+    
 }
 @media (max-width: 480px) {
-    body .wrapper {
-        margin: 0 50px;
-    }
+    
     section.blackdiv .bg p {
         font-size: 10px;
     }
@@ -905,32 +939,24 @@ span.overlay {
     section.spotlight {
         padding: 10px;
     }
-    section.spotlight div.left .top span {
-        font-size: 10px;
-    }
+   
     section.spotlight div.left .bottom {
         width: 85px;
     }
-    section.spotlight  div.right .main-image  img{
-        width: 140px;
-        height: 70px;
-    }
+    
     .services div.service {
         width: 40px;
     }
-    .product .box {
-        width: 180px;
-        height: 230px; 
-        overflow: hidden;
-    }
-    .product .box img {
-        object-fit: contain;
-        max-width: 85%;  
-        max-height: 85%;
-    }
+    
+   
     .product .box .topRight {
-        left: 164px;
-        top: 20px;
+        left: 235px;
+        top: 22px;
+        gap: 45px;
+    }
+    .circle {
+        width: 35px;
+        height: 35px;
     }
     .product .box .add-cart {
         width: 200px;
@@ -938,15 +964,15 @@ span.overlay {
         height: 30px;
     }
     .product .box .add-cart p{
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
     }
     section.spotlight div.left .bottom .shop a {
         font-size: 12px;
     }
     .product .content h4 {
-        width: 180px;
-        font-size: 14px;
+       
+        font-size: 20px;
         font-weight: 500;
     }
     .product .content span.price {
@@ -954,6 +980,22 @@ span.overlay {
     }
     footer div.top {
         padding: 24px;
+    }
+    section.spotlight div.left .bottom .shop {
+        position: absolute;
+        margin-top: -13px;
+    }
+    section.categories div.heading h2 {
+        text-align: center;
+    }
+    section.categories div.categoryItem ul {
+        justify-content: space-evenly;
+    }
+    section.products,.products2, .products3{
+        justify-content: center;
+    }
+    .moreProduct {
+        justify-content: center;
     }
 }
 @media (max-width: 360px) {
@@ -972,9 +1014,7 @@ span.overlay {
     header {
         justify-content: space-between;
     }
-    body .wrapper {
-        margin: 0 30px;
-    }
+    
     header div.right .input-container {
         display: none;
     }
